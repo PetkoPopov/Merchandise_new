@@ -1,0 +1,17 @@
+
+
+/* 
+    Created on : 04.11.2022, 17:05:39
+    Author     : User_1
+*/
+body{
+    background-color: aliceblue;
+    
+}
+.unique{
+    background-color: burlywood;
+}
+img{
+    position: absolute;
+    z-index:-1
+}
