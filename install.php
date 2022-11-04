@@ -3,14 +3,29 @@
 </head>
 <body>
 <?php
+
 $msql_= new mysqli('localhost', 'root', '');
+if(isset($_GET['delete_table']) && $_GET['delete_table'] == "delete databases"){
+    foreach($_GET as $k=>$v){
+        if($k != "delete_table"){
+$query = "drop database $v;";
+$result = $msql_->query($query); 
+if($result === true){
+    echo '<br/>DELETED '.$v;
+}      
+}
+    }
+
+
+    
+}else{
 $unique = uniqid();
 $query = "Create database $unique";
 if($msql_->query($query) === true){
     echo "Database ";
     ?>
-    <div id="unique">//<?=$unique?></div>
-    //<?php
+    <div id="unique"><?=$unique?></div>
+    <?php
     echo"Created Successfuly";    
 }
 $table_name = $unique.".merchandise";
@@ -33,7 +48,7 @@ $res = $msql_->query($query);
 $arr_databese = ($res->fetch_all());
 foreach ($arr_databese as $key => $value) {
        ?>  
-       <input type='checkbox' name="<?=$value[0]?>" value= $value[0]  />
+       <input type='checkbox' name="<?=$key?>" value= "<?=$value[0]?>"  />
 <?php
 echo "$value[0]<br/>";
 }
@@ -41,5 +56,8 @@ echo "$value[0]<br/>";
         <input type="submit" name="delete_table" value="delete databases"/>
         <input type="submit" name="seed_table" value="seed"/><!-- comment -->
     </form>
+    <?php
+}
+    ?>
 </body>
 
