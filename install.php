@@ -19,7 +19,8 @@ if($result === true){
 
     
 }else{
-$unique = uniqid();
+//$unique = uniqid();
+    $unique = 'merchandise_2';
 $query = "Create database $unique";
 if($msql_->query($query) === true){
     echo "Database ";
@@ -28,7 +29,7 @@ if($msql_->query($query) === true){
     <?php
     echo"Created Successfuly";    
 }
-$table_name = $unique.".merchandise";
+$table_name = $unique.".test_1";
 $query = "create table $table_name("
         . "`id` int not null auto_increment, "
         ."`product` varchar(100) not null ,"
@@ -37,7 +38,7 @@ $query = "create table $table_name("
         . " `user` varchar(100) not null "
         . ", `date` date ,primary key(id))";
 if($msql_->query($query) == true){
-    echo "</br>table merchandise has created";
+    echo "</br>table test_1 has created";
 }else{
     echo "</br>table has not created";
 }
