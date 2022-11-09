@@ -50,7 +50,7 @@
     <input type="submit" class="beauty" value="<?=$value[4]?>" name="user"/>
     <input type="submit" class="beauty" value="<?=$value[5]?>" name="date"/></form>
     <form action="process.php"> <input type="submit" class="green"  value="delete_<?=$value[0]?>" name="delete_"/></form>
-    <form action="process.php">  <input type="submit" class="orange" value="edit_<?=$value[0]?>" name="edit"/></form>
+    <form action="form_edit.php">  <input type="submit" class="orange" value="edit_<?=$value[0]?>" name="edit"/></form>
     <p></p>
     <?php
            

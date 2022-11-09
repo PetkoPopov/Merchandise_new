@@ -13,7 +13,7 @@
            
             <?php
             $msql = new mysqli('localhost', 'root', '', 'merchandise_2');
-            
+                
             $query_store = "select distinct store from merchandise_2.test_1 ";
             $query_product="select distinct product from merchandise_2.test_1";
             $result = $msql->query($query_product);
@@ -76,14 +76,16 @@ else if(isset($_GET['insert_new_product'])){
 $user='unknown';
 if(isset( $_GET['price'])&&!empty( $_GET['price'])){$price = $_GET['price'];}
 $date = date('y-m-d');
-if((isset($product)&& isset($price)) && isset($store)){
+/////////////////////////////////////////////////////////////////////
+ if((isset($product)&& isset($price)) && isset($store)&& !isset($_GET['edit'])){
    
 $query = "Insert into merchandise_2.test_1 (`product`,`store`,`price`,`date`,`user`) values('$product','$store','$price','$date','$user')";
-echo $query;
 if($msql->query($query)==true){
     header("Location:show_everything.php");
 }
 }
+    
+
 $msql->close();
 ?>        
              <a href="show_everything.php">

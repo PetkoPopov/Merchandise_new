@@ -17,4 +17,5 @@ $id=(int)$edit[1];
          var_dump($id);
          die;
      }
+   
 header("Location:show_everything.php");
