@@ -1,6 +1,6 @@
 
 <?php
-echo "WELOCOME IN PROCCESS EDIT";
+echo "WELO COME IN PROCCESS EDIT";
 $msql = new mysqli('localhost', 'root', '', 'merchandise_2');
             
 if(isset($_GET['edit'])){
@@ -20,26 +20,17 @@ if(isset($_GET['edit'])){
           
           ?>
 <form action="process_edit.php">
-    <input type="text" name="product" value="<?=$product_?>"/>
-    
-    
+    <input type="hidden" name="id" value="<?=$id_?>"/>
+    <p>Product:<input type="text" name="product" value="<?=$product_?>"/></p>
+    <p>Store:<input type="text" name="store" value="<?=$store_?>"/></p>
+    <p>Price:<input type="text" name="price" value="<?=$price_?>"/></p>
+    <p>Date<input type="text" name="date" value="<?=$date_?>"/></p>
+    <p>User: <input type="text" name="user" value="<?=$user_?>"/></p>
+    <p><input type="submit" name="user" value="edit"/></p>
+      
+
+    <?php
+       $msql->close();
+    ?>
+
 </form>
-
-
-
-<?php
-//          
-//if(isset($_GET['edit'])&&(isset($product)&& isset($price)) && isset($store)){
-//$query = "update merchandise_2.test_1  set `product` = '$product',`store`='$store',`price`='$price',`date`='$date',`user`='$user'  where id = $id ";
-//
-//if($msql->query($query)==true){
-//    
-//    header("Location:show_everything.php");
-//}
-//}
-
-
-
-
-
-//header("Location:show_everything.php");

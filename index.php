@@ -67,7 +67,8 @@
 //  var_dump($_GET,'$_GET');die;
 if((isset($_GET['select_store']) && !empty($_GET['select_store'])) && empty($_GET['insert_new_store'])){ $store = $_GET['select_store'];}
 else if(isset($_GET['insert_new_store'])){
-    $store = $_GET['insert_new_store'];
+   
+   $store = $_GET['insert_new_store']; 
 }
 if(isset($_GET['select_product'])&&!empty($_GET['select_product']) && empty($_GET['insert_new_product'])){$product = $_GET['select_product'];}
 else if(isset($_GET['insert_new_product'])){

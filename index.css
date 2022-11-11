@@ -21,3 +21,6 @@ img{
 .green{
     background-color: #009900;
 }
+form{
+    position:relative;
+}

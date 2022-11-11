@@ -10,12 +10,6 @@ if(isset($_GET['delete_'])){
          $msql->query($query);
         
      }  
-   else if(isset($_GET['edit'])){
-$edit = explode('_',$_GET['edit']);
-$id=(int)$edit[1];
-
-         var_dump($id);
-         die;
-     }
-   
+  
+$msql->close();   
 header("Location:show_everything.php");
