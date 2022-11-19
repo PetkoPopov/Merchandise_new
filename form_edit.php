@@ -26,7 +26,7 @@ if(isset($_GET['edit'])){
     <p>Price:<input type="text" name="price" value="<?=$price_?>"/></p>
     <p>Date<input type="text" name="date" value="<?=$date_?>"/></p>
     <p>User: <input type="text" name="user" value="<?=$user_?>"/></p>
-    <p><input type="submit" name="user" value="edit"/></p>
+    <p><input type="submit" name="edit" value="edit"/></p>
       
 
     <?php

@@ -28,15 +28,16 @@
                 }
        ?>
     <form action="show_all_for_store.php">
-    <input type="submit" class="beauty" value="<?=$value[1]?>" name="product"/>
+    <input type="submit" class="beauty" value="<?=$value[1]?>" name="product" />
     <input type="submit" class="beauty" value="<?=$value[2]?>" name="price"/>
     <input type="submit" class="beauty" value="<?=$value[3]?>" name="store"/>
     <input type="submit" class="beauty" value="<?=$value[4]?>" name="user"/>
-    <input type="submit" class="beauty" value="<?=$value[5]?>" name="date"/></form>
-    <div>
-    <form action="process.php" ><input type="submit" class="green"  value="delete_<?=$value[0]?>" name="delete_" disabled/></form>
-    <form action="form_edit.php"><input type="submit" class="orange" value="edit_<?=$value[0]?>" name="edit" disabled/></form>
-    </div>
+    <input type="submit" class="beauty" value="<?=$value[5]?>" name="date"/>
+    </form>
+
+    <form action="process.php" ><input type="submit" class="green"  value="delete_<?=$value[0]?>" name="delete_" /></form>
+    <form action="form_edit.php" ><input type="submit"  value="edit_<?=$value[0]?>" name="edit" /></form>
+    
     <p></p>
     <?php
                 }            

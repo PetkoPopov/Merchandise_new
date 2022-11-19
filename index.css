@@ -22,5 +22,12 @@ img{
     background-color: #009900;
 }
 form{
-    position:relative;
+    position:absolute;
+}
+.__price__{
+    background-color: #00cc33;
+    background-size: auto;
+}
+div div{
+    background-color: #cc0000;
 }
