@@ -42,7 +42,16 @@ if($msql_->query($query) == true){
 }else{
     echo "</br>table has not created";
 }
-    ?><form>
+$query ="ALTER TABLE $table_name"
+        . " ADD `notis` TEXT null AFTER `date`, "
+        . " ADD `pic` BIGINT  AFTER `notis`,"
+        . " ADD `category` VARCHAR(100) NOT NULL AFTER `pic`;";
+if($msql_->query($query) == true){
+    echo "</br>table test_1 has upgradet ";
+}else{
+    echo "</br>table has not upgrated";
+}
+?><form>
         <?php
 $query= "show databases;";
 $res = $msql_->query($query);
@@ -59,6 +68,7 @@ echo "$value[0]<br/>";
     </form>
     <?php
 }
+$msql_->close();
     ?>
 </body>
 

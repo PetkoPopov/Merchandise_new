@@ -1,11 +1,6 @@
-
-
-/* 
-    Created on : 04.11.2022, 17:05:39
-    Author     : User_1
-*/
 body{
-    background-color: aliceblue;
+/*    background-color: aliceblue;*/
+background-color: #ffcc33
     
 }
 .unique{
@@ -22,7 +17,8 @@ img{
     background-color: #009900;
 }
 form{
-    position:absolute;
+    border-color: black;
+   
 }
 .__price__{
     background-color: #00cc33;
@@ -30,4 +26,15 @@ form{
 }
 div div{
     background-color: #cc0000;
+}
+.delete{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.orange{
+    border-color: black solid 3px;
+    
+}
+a{
+    background-color: #ff3399
 }
