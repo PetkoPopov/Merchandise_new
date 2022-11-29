@@ -7,7 +7,10 @@
     </head>
     <link rel="stylesheet" href="index.css"/>
     <body>
-         
+        <form method="post" action="upload_image_process.php" enctype="multipart/form-data" /><!-- comment -->
+        <input type="file" name="image"/> 
+        <input type="submit" value="качи снимка" />    
+    </form>   
              <!--<img src="image/IMG_20180710_104642_HDR.jpg"/>-->
         <form action="process_input.php">
            
@@ -89,7 +92,7 @@
             
         <button> <input type="submit" id="submit_" name="submit"/></button>
         </form>
-
+      
             <?php
 $msql->close();
 ?>        
