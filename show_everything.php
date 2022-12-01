@@ -24,7 +24,7 @@
     <a href="index.php">return to index</a>
     </p>
         <?php
-//             var_dump($value);
+             var_dump($value);
                 }
        ?>
     <form action="show_all_for_store.php">
@@ -36,7 +36,7 @@
     <input type="submit" class="beauty" value="<?=$value[6]?>" name="category"/>
     <input type="submit" class="beauty" value="<?=$value[8]?>" name="date"/>
      <input type="submit" class="beauty" value="<?=$value[4]?>" name="notice"/>
-      <input type="submit" class="beauty" value="<?=$value[5]?>" name="pic"/>
+     <img src="<?=$value[5]?>" width="40px" height="30px" />
     </form>
     
     <p></p>

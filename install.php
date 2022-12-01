@@ -44,7 +44,7 @@ if($msql_->query($query) == true){
 }
 $query ="ALTER TABLE $table_name"
         . " ADD `notis` TEXT null AFTER `date`, "
-        . " ADD `pic` BIGINT  AFTER `notis`,"
+        . " ADD `pic` varchar(255) null  AFTER `notis`,"
         . " ADD `category` VARCHAR(100) NOT NULL AFTER `pic`;";
 if($msql_->query($query) == true){
     echo "</br>table test_1 has upgradet ";

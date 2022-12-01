@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -7,13 +5,10 @@
     </head>
     <link rel="stylesheet" href="index.css"/>
     <body>
-        <form method="post" action="upload_image_process.php" enctype="multipart/form-data" /><!-- comment -->
+        <form method="post" action="process_input.php" enctype="multipart/form-data" /><!-- comment -->
         <input type="file" name="image"/> 
         <input type="submit" value="качи снимка" />    
-    </form>   
-             <!--<img src="image/IMG_20180710_104642_HDR.jpg"/>-->
-        <form action="process_input.php">
-           
+              
             <?php
             $msql = new mysqli('localhost', 'root', '', 'merchandise_2');
                 
