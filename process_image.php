@@ -8,7 +8,9 @@ $msql = new mysqli('localhost', 'root', '', 'merchandise_2');
     $destination = 'image/'/*не забравяй слаш чертата след image*/;
 $destination .= $_FILES['image']['name'];
 move_uploaded_file($_FILES["image"]["tmp_name"],$destination );
-$query = "update merchandise_2.test_1  set `pic` ='$destination' where ìd= $id ";
+$query = "Update merchandise_2.test_1 "
+                      . "set `pic`='$destination' "
+                      . " where id = $id";
 if($msql->query($query)){
     header("Location: show_everything.php");
 }else{
