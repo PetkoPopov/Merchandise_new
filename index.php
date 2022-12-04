@@ -5,10 +5,6 @@
     </head>
     <link rel="stylesheet" href="index.css"/>
     <body>
-        <form method="post" action="process_input.php" enctype="multipart/form-data" /><!-- comment -->
-        <input type="file" name="image"/> 
-        <input type="submit" value="качи снимка" />    
-              
             <?php
             $msql = new mysqli('localhost', 'root', '', 'merchandise_2');
                 
@@ -25,6 +21,11 @@
                          
                      
           ?>
+        
+        <form method="post" action="process_input.php" enctype="multipart/form-data" />
+        <input type="file" name="image"/>        
+        <input type="submit" value="качи снимка" />    
+              
             <p>
             Insert Product:
             <select name="select_product">
