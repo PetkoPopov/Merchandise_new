@@ -16,9 +16,9 @@ img{
 .green{
     background-color: #009900;
 }
-form{
+sp form{
+     display: inline-block;        
     border-color: black;
-   
 }
 .__price__{
     background-color: #00cc33;
@@ -32,9 +32,17 @@ div div{
     flex-wrap: nowrap;
 }
 .orange{
-    border-color: black solid 3px;
-    
+    border-color: black;    
 }
 a{
     background-color: #ff3399
+}
+.button_{
+    /*box-sizing: content-box;*/
+    
+    background-color: #ffcc33;
+
+}
+.beauty:hover{
+    background-color: aqua;
 }

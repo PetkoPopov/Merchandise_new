@@ -15,18 +15,14 @@
     <a href="show_everything.php">return to show everythhing </a>
                     <?php
             
-                $count = 0 ;
-            foreach ($arr_for_select as $k=>$value){
-                $count++;
-                if($count%6 == 0){
+            foreach ($arr_for_select as $k=>$value){      
+                if($k%6 == 0){
                     ?>
     <p>
     <a href="index.php">return to index</a>
     </p>
-        <?php
-             var_dump($value);
-                }
-       ?>
+        <?php  }   ?>
+    <sp>
     <form action="show_all_for_store.php">
     <input type="submit" class="beauty" value="<?=$value[1]?>" name="product" />
     <input type="submit" class="beauty" value="<?=$value[2]?>" name="price"/>
@@ -35,15 +31,24 @@
     
     <input type="submit" class="beauty" value="<?=$value[6]?>" name="category"/>
     <input type="submit" class="beauty" value="<?=$value[8]?>" name="date"/>
-     <input type="submit" class="beauty" value="<?=$value[4]?>" name="notice"/>
-     <img src="<?=$value[5]?>" width="40px" height="30px" />
+    </form><!-- comment -->
+    
+    <form action="form_img.php" >
+        <input type="image" src="<?=$value[5]?>" width="40px" height="30px" />
+        <input type="hidden" name="id" value="<?=$value[0]?>"/>
+    
     </form>
     
-    <p></p>
-    <div class="delete">
     <form action="process.php" ><input type="submit" class="green"  value="delete_<?=$value[0]?>" name="delete_" /></form>
     
     <form action="form_edit.php" ><input type="submit"  class="orange" value="edit_<?=$value[0]?>" name="edit" /></form>
+    </sp>
+    
+    <form action="form_notice.php" class="button_"> <input type="submit"  value="<?=$value[4]?>" name="notice"/>
+        <input   type="hidden" name="hidden_id" value="<?=$value[0]?>"      />
+    </form>
+    <p></p>
+    <div class="delete">
     </div>
     <p></p>
     <?php
