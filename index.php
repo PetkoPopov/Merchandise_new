@@ -24,7 +24,7 @@
         
         <form method="post" action="process_input.php" enctype="multipart/form-data" />
         <input type="file" name="image"/>        
-        <input type="submit" value="качи снимка" />    
+        <!--<input type="submit" value="качи снимка" />-->    
               
             <p>
             Insert Product:

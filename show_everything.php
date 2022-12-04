@@ -33,9 +33,9 @@
     <input type="submit" class="beauty" value="<?=$value[8]?>" name="date"/>
     </form><!-- comment -->
     
-    <form action="form_img.php" >
+    <form action="show_image.php" method="post" >
         <input type="image" src="<?=$value[5]?>" width="40px" height="30px" />
-        <input type="hidden" name="id" value="<?=$value[0]?>"/>
+        <input type="hidden" name="image" value="<?=$value[5]?>"/>
     
     </form>
     

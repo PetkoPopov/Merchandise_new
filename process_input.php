@@ -37,4 +37,6 @@ if($msql->query($query)==true){
     
     $msql->close();
 header("Location:show_everything.php");}
+ }else{
+     echo "NO Record";
  }

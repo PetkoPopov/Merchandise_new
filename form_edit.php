@@ -19,13 +19,14 @@ if(isset($_GET['edit'])){
           }
           
           ?>
-<form action="process_edit.php">
+<form action="process_edit.php" enctype="multipart/form-data" method="post">
     <input type="hidden" name="id" value="<?=$id_?>"/>
     <p>Product:<input type="text" name="product" value="<?=$product_?>"/></p>
     <p>Store:<input type="text" name="store" value="<?=$store_?>"/></p>
     <p>Price:<input type="text" name="price" value="<?=$price_?>"/></p>
-    <p>Date<input type="text" name="date" value="<?=$date_?>"/></p>
+    <p>Date:<input type="text" name="date" value="<?=$date_?>"/></p>
     <p>User: <input type="text" name="user" value="<?=$user_?>"/></p>
+    <p>Image:<input type="file" name="image"/></p>
     <p><input type="submit" name="edit" value="edit"/></p>
       
 
